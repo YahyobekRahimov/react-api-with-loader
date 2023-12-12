@@ -1,0 +1,43 @@
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & > div {
+      background-color: white;
+      width: 75px;
+      height: 75px;
+      overflow: hidden;
+      border-radius: 50%;
+      position: relative;
+      .first-circle {
+        width: 60px;
+        height: 60px;
+        background-color: #333;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+      .second-circle {
+        width: 75px;
+        height: 75px;
+        border-top: 30px solid green;
+        position: absolute;
+        animation: loaderRotation 1s linear infinite;
+      }
+    }
+  }
+  
+  @keyframes loaderRotation {
+    0% {
+      rotate: 0deg;
+    }
+    50% {
+      rotate: 180deg;
+    }
+    100% {
+      rotate: 360deg;
+    }
+  }

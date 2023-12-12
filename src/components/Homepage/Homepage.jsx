@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import Card from '../Card/Card';
 import './Homepage.scss';
+import Loader from '../Loader/Loader';
+
 const url = 'https://free-to-play-games-database.p.rapidapi.com/api/filter?tag=3d.mmorpg.fantasy.pvp&platform=pc';
 const options = {
 	method: 'GET',
@@ -25,7 +27,7 @@ export default function Homepage() {
             const result = await response.json();
             setData(result);
             } catch (error) {
-            console.error(error.message);
+                console.error(error.message);
             } finally {
                 setIsLoading(false);
             }
@@ -34,12 +36,7 @@ export default function Homepage() {
   return (
     <div className="container title__container">
         <h1>Game HUB</h1>
-        {isLoading ? <div className='loader'>
-            <div>
-                <span className='first-circle'></span>
-                <span className='second-circle'></span>
-            </div>
-        </div> : null}
+        {isLoading && <Loader />}
         <ul className='game-list'>
             {
                 data.map(element => {
