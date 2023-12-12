@@ -1,0 +1,62 @@
+/* Card.scss */
+
+.card {
+    width: 300px; /* Adjust the width as needed */
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #555; /* Darker border color */
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #333;
+  
+    img {
+      width: 100%;
+      height: 150px; /* Adjust the height as needed */
+      object-fit: cover;
+      border-bottom: 1px solid #ddd;
+    }
+  
+    .card-title {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      color: #fff;
+    }
+    
+    .card-description {
+      color: #fff;
+      line-height: 1.4;
+      padding: 0 1rem;
+    }
+  
+    /* Button.scss */
+
+.learn-more-button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    margin-bottom: 20px;
+    margin-top: 25px;
+  
+    &:hover {
+      background-image: linear-gradient(45deg, #3498db, #2c3e50);
+      transform: scale(1.1);
+    }
+  
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+  
+  }
+  
